@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="showMsg()">
+    <script>
+        function showMsg(){
+            alert("浏览器大小被改变");
+        }
+    </script>
+
+    <p onclick="showImg()">こんにちはいたろうめん</p>
+    <script>
+        function showImg(){
+            document.write('<img src="pic3.jpeg">');
+        }
+    </script>
+
+    <span style="font-size: 36px;">
+        <a href="www.baidu.com" id="a1">javascript技术论坛</a>
+    </span>
+    <script>
+        document.linkColor = "blue";
+        document.alinkColor = "#000000";
+        document.vlinkColor = "#00CCFF";
+    </script>
+
+    <script>
+        var Arraycolor = new Array("#00FF66","#FFFf99","#99CCFF","#FFCCFF","#FFCC99","#00FFFF");
+        var n = 0;
+        function changecolors(){
+            n++;
+            if(n == (Arraycolor.length - 1)) n = 0;
+            document.bgColor = Arraycolor[n];
+            document.fgColor = Arraycolor[n - 1];
+            setTimeout("changecolors()",1000);
+        }
+        changecolors();
+    </script>
+    <script>
+        document.write("<b>当前页面的URL:</b>" + document.URL);
+    </script>
+
+    <script>
+        document.write("使用write方法输出的第一段内容");
+        document.write("こんにちはいたろうさん、今年もよろしくお願いしますね");
+    </script>
+
+    
+</body>
+</html>

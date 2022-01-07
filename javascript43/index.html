@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onunload="pclose()">
+    <img src="pic3.jpeg" name="img1" onload="blowup()" onmouseout="blowup()" onmouseover="reduce()">
+    <script>
+        var h = img1.height;
+        var w = img1.width;
+        function blowup(){
+            if(img1.height >= h){
+                img1.height = h - 100;
+                img1.width = w - 100;
+            }
+        }
+        function reduce(){
+            if(img1.height < h){
+                img1.height = h;
+                img1.width = w;
+            }
+        }
+        function pclose(){
+            alert("欢迎浏览本网页");
+        }
+    </script>
+    
+    
+</body>
+</html>
